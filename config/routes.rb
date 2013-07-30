@@ -1,9 +1,14 @@
 EventPlanner::Application.routes.draw do
   get "pages/home"
-
-  resources :events
-
   devise_for :users
+
+  resources :users 
+    resources :events do
+      resources :comments
+    end
+  
+
+  
   match 'users/:id' => 'users#show', as: :user
 
   # The priority is based upon order of creation:

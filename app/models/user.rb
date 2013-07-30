@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   attr_accessible :title, :body, :email, :password, :password_confirmation
 
   has_many :events
+  has_many :comments
 end

@@ -1,12 +1,11 @@
 
 <div class="box">
 <%= link_to (image_tag event.image(:medium)), event %>
-<p class="description">
-	<%= event.name %>
-  <%= event.description %>
-  <%= event.address %>
-  <%= event.latitude %>
-  <%= event.longitude %>
+<div class="description">
+	<p><%= event.name %></p>
+  <p><%= event.description %></p>
+  <p><%= event.address %></p>
+
   <p class="username">
 		Event Host: <%= link_to event.user.email, event.user %>
 	</p>

@@ -8,4 +8,5 @@ class Event < ActiveRecord::Base
   													styles: { medium: "320x240" }
 
   belongs_to :user
+  has_many :comments
 end
