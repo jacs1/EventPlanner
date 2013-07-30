@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'simple_form'
 gem 'devise'
 gem 'paperclip'
+gem 'geocoder'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

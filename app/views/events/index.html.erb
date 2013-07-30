@@ -1,9 +1,15 @@
-<h1> Welcome To Event Planner </h1>
-
-<div class="container">
 
 
+<% if user_signed_in? %>
+<div class="well" id="index-header">
+<h5> My Events </h5>
 	<div id="events">
 	  <%= render @event %>
 	</div>
 </div>
+
+<% else %>
+<div class='visitor'>
+	<%= render 'pages/home' %>
+</div>
+<% end %>

@@ -1,6 +1,10 @@
 class Event < ActiveRecord::Base
   attr_accessible :address, :description, :latitude, :longitude, :name, :image
-  has_attached_file :image, presence: true
+  geocoded_by :address
+
+  has_attached_file :image, presence: true,
+  													size: { less_than: 5.megabytes },
+  													styles: { medium: "320x240" }
 
   belongs_to :user
 end
