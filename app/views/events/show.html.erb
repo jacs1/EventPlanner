@@ -16,8 +16,9 @@
 			<% end %>
 			</div>
 			
+
 			<%#= render 'comments/comment'%>
-			<%#= render 'comments/form' %>
+			<%= link_to 'New Comment', event_comments_path(@event.id) %>
 		</div>
 	</div>
 </div>

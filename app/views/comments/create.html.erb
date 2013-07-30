@@ -1,0 +1,15 @@
+<div id="comments">
+  <% for comment in @event.comments %>
+
+    <div class="comment">
+      <table width="200px">
+      <tr>
+      <p><td><%= comment.user.email if comment.user %></td>says: </p>
+      <p><td><%= comment.body %></td></p>
+      </tr>
+      </table>
+    </div>
+  <% end %>
+
+
+</div>
