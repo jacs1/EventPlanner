@@ -7,6 +7,8 @@
 			  <b>Description:</b>
 			  <%= @event.description %>
 			</p>
+
+			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.latitude}%2C#{@event.longitude}" %>
 			<% if current_user == @event.user %>
 			  <%= link_to 'Edit', edit_event_path(@event) %> |
 				<%= link_to 'Back', events_path %>
