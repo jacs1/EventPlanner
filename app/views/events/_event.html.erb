@@ -7,12 +7,12 @@
   <p><%= event.address %></p>
 
   <p class="username">
-		Event Host: <%= link_to event.user.email, event.user %>
+		Event Host: <%= link_to event.user.name, event.user %>
 	</p>
 </p>
 
 <p>
-	<%= link_to 'Remove', event, method: :delete, data: { confirm: 'Are you sure you want to delete this event?' } %>
+	<%= link_to 'Remove', event_path, method: :delete, data: { confirm: 'Are you sure you want to delete this event?' } %>
 </p>
 	
 </div>
