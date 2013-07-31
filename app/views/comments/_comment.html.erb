@@ -1,15 +1,7 @@
-<div id="comments">
-  <% for comment in @event.comments %>
-
-    <div class="comment">
-      <table width="200px">
-      <tr>
-      <p><td><%= comment.user.email if comment.user %></td>says: </p>
-      <p><td><%= comment.body %></td></p>
-      </tr>
-      </table>
-    </div>
-  <% end %>
-
-
+<div class="comment">
+  <h3> Comments </h3> 
+      <% @comments.each do |comment| %>
+      <%= comment.user.name %> says:
+      <div class="well"><%= simple_format comment.body %></div>
+    <% end %>
 </div>

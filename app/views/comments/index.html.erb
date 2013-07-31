@@ -1,10 +1,13 @@
-<div class="comments">
-	<h1> Comments </h1>
+<div class="comment">
+	<h3> Comments </h3>
+	<p><%= @event.name %></p>
+	<%= image_tag @event.image %>
 
-
-
-
+	
+			<% @comments.each do |comment| %>
+			<div class="well"><%= simple_format comment.body %></div>
+		<% end %>
 </div>
-
-	<p> Add Comment <%= render 'form' %> </p>
+<div class="new-comment">
+	<p><%= link_to "New Comment", [:new, @event, :comment], class: 'btn btn-primary'%></p>
 </div>

@@ -3,6 +3,7 @@ $baseFontFamily: Roboto;
 
 @import 'bootstrap';
 
+
 .navbar-inner{
 	height: 55px;
 
@@ -34,11 +35,20 @@ $baseFontFamily: Roboto;
 	box-shadow: 1px 1px 10px #444;
 }
 
-.comments{
+.comment{
 	margin-top: 80px;
+	margin-left: 20px;
+	width: 300px;
 
 }
-
+.comment img{
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 10px #444;
+}
 .new-comment{
-	margin-top: 80px;
+	margin-left: 20px;
+}
+
+.comment-form{
+	margin-left: 20px;
 }

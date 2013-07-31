@@ -5,6 +5,7 @@ EventPlanner::Application.routes.draw do
   resources :users 
     resources :events do
       resources :comments
+      
     end
   
 
