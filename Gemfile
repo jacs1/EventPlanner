@@ -6,6 +6,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'geocoder'
 gem 'bootstrap-sass'
+gem 'pry'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
