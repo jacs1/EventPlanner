@@ -14,17 +14,23 @@ describe Event do
   end
 end
 
-describe EventsController, type: :controller do
+  describe EventsController, type: :controller do
 
-  describe 'the events index page' do 
-    it 'should respond with a HTTP 200 status' do 
-      get :index
-      expect(response.status).to eq(200)
+    describe 'the events index page' do 
+      it 'should respond with a HTTP 200 status' do 
+        get :index
+        expect(response.status).to eq(200)
+      end
+      
+    describe 'the events create action' do 
+      it 'creates a new event' do 
+       @event = Event.create
+       @event.save
+       Event.count.should == 1
+      end
     end
-    
   end
 
 end
-
 
 
