@@ -5,6 +5,10 @@ describe Event do
   	@event = Event.new(address: '1 Union Square')
   end
 
+  it 'should not be nil' do 
+    expect(@event).to_not be_nil
+  end
+
   it 'should return an address' do 
   	@event[:address].should == '1 Union Square'
   end
@@ -17,10 +21,10 @@ describe EventsController, type: :controller do
       get :index
       expect(response.status).to eq(200)
     end
- 
+    
   end
-end
 
+end
 
 
 

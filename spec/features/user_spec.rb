@@ -12,6 +12,9 @@ describe User do
   it 'should have an email address' do 
   	@user[:email].should == "joseph.simoes@gmail.com"
   end
+  
+  context 'associations' do 
+  	it { should have_many(:events) }
+  end
 end
-
 

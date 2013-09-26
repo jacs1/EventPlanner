@@ -13,6 +13,7 @@ gem 'sqlite3', :group => [:development, :test]
 
 group :test do 
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end 
 
 group :production do
