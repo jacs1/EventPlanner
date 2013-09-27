@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Event do 
   before do 
-  	@event = Event.new(address: '1 Union Square')
+    @event = FactoryGirl.build(:event)
   end
 
   it 'should not be nil' do 
@@ -10,7 +10,15 @@ describe Event do
   end
 
   it 'should return an address' do 
-  	@event[:address].should == '1 Union Square'
+  	@event[:address].should == '1 Times Square, NY NY'
+  end
+
+  it 'should have a description' do 
+    @event[:description].should_not == nil
+  end
+ 
+  it 'should return an event called Awesome event' do 
+    @event[:name].should == 'Awesome Event' 
   end
 end
 
